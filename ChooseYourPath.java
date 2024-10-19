@@ -16,9 +16,54 @@ public class ChooseYourPath {
             a = userInput.equals("upstairs");
             b = userInput.equals("downstairs");
             if (a == true) {
-                System.out.println("You went upstairs.");
+                System.out.println(
+                        "You go upstairs. At the top of the staircase, you see a mummy! Do you try and unravel it? Type yes or no.");
+                userInput = scanner.nextLine();
+                a = userInput.equals("yes");
+                b = userInput.equals("no");
+                if (a == true) {
+                    System.out.println("You unravel it. It gets really mad and puts you in a sarcophagus. The end.");
+                } else if (b == true) {
+                    System.out.println(
+                            "You're a kind person and don't unravel it. It gives you a suspicious looking biscuit as a reward. Do you eat it? Type yes or no.");
+                    userInput = scanner.nextLine();
+                    a = userInput.equals("yes");
+                    b = userInput.equals("no");
+                    if (a == true) {
+                        System.out.println("It's delicious, and you made a new friend! The end!");
+                    } else if (b == true) {
+                        System.out.println(
+                                "It's feelings are really hurt and it cries, and then dracula eats you. The end.");
+                    } else {
+                        System.out.println(c);
+                    }
+                } else {
+                    System.out.println(c);
+                }
             } else if (b == true) {
-                System.out.println("You went downstairs.");
+                System.out.println(
+                        "You go downstairs, and at the bottom of the staircase you see Bigfoot. He looks a lot like Chewbacca. Do you ask if they're related? Type yes or no.");
+                userInput = scanner.nextLine();
+                a = userInput.equals("yes");
+                b = userInput.equals("no");
+                if (a == true) {
+                    System.out.println(
+                            "It says no, but they're best friends! It invites you for dinner. Do you accept? Type yes or no.");
+                    userInput = scanner.nextLine();
+                    a = userInput.equals("yes");
+                    b = userInput.equals("no");
+                    if (a == true) {
+                        System.out.println("You have a great time together! The end!");
+                    } else if (b == true) {
+                        System.out.println("It eats you. The end.");
+                    } else {
+                        System.out.println(c);
+                    }
+                } else if (b == true) {
+                    System.out.println("It notices you staring silently and eats you. The end.");
+                } else {
+                    System.out.println(c);
+                }
             } else {
                 System.out.println(c);
             }
