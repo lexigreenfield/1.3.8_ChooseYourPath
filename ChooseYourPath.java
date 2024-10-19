@@ -69,7 +69,52 @@ public class ChooseYourPath {
             }
 
         } else if (b == true) {
-            System.out.println("you kicked");
+            System.out.println(
+                    "You kick down the door. On either side of a massive staircase in the middle, there are two fancy looking doors. Do you go left or right? Type left or right.");
+            userInput = scanner.nextLine();
+            a = userInput.equals("left");
+            b = userInput.equals("right");
+            if (a == true) {
+                System.out.println(
+                        "You go through the door and see a witch making a bubbling potion. Do you offer to help? Type yes or no.");
+                userInput = scanner.nextLine();
+                a = userInput.equals("yes");
+                b = userInput.equals("no");
+                if (a == true) {
+                    System.out.println(
+                            "You make a delicious soup together, and she tells you how grateful she is to finally have a friend. The end!");
+                } else if (b == true) {
+                    System.out.println("She curses you for being unhelpful. The end.");
+                } else {
+                    System.out.println(c);
+                }
+            } else if (b == true) {
+                System.out.println(
+                        "You open the door and see a spider making a web. The web looks shiny and beautiful. Do you try to touch it? Type yes or no.");
+                userInput = scanner.nextLine();
+                a = userInput.equals("yes");
+                b = userInput.equals("no");
+                if (a == true) {
+                    System.out.println("You get stuck for eternity. The end.");
+                } else if (b == true) {
+                    System.out.println(
+                            "You leave the spider and its web alone and continue on. You find a talking pumpkin. Do you try and befriend it? Type yes or no.");
+                    userInput = scanner.nextLine();
+                    a = userInput.equals("yes");
+                    b = userInput.equals("no");
+                    if (a == true) {
+                        System.out.println("It says yes! You have a party!!! The end!");
+                    } else if (b == true) {
+                        System.out.println("It eats you. The end.");
+                    } else {
+                        System.out.println(c);
+                    }
+                } else {
+                    System.out.println(c);
+                }
+            } else {
+                System.out.println(c);
+            }
         } else {
             System.out.println(c);
         }
