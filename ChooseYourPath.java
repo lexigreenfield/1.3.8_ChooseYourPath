@@ -3,9 +3,22 @@ import java.util.Scanner;
 public class ChooseYourPath {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        System.out.println("Are you excited to play? Type yes or no.");
+        String userInput = scanner.nextLine(); // using scanner
+        boolean e = userInput.equals("yes");
+        System.out.println("Are you ready? Type yes or no.");
+        userInput = scanner.nextLine();
+        boolean d = userInput.equals("yes");
+        if (e && d) { // compound boolean expression
+            System.out.println("Awesome!");
+        } else if (e || d) {
+            System.out.println("Here we go!");
+        } else {
+            System.out.println("Too bad.");
+        }
         System.out.println(
                 "Welcome to the Haunted Mansion. Do you knock on the door or kick it down? Enter \"knock\" or \"kick\".");
-        String userInput = scanner.nextLine();
+        userInput = scanner.nextLine();
         boolean a = userInput.equals("knock");
         boolean b = userInput.equals("kick");
         String c = "You didn't answer the question. You explode! The end.";
@@ -13,7 +26,7 @@ public class ChooseYourPath {
             System.out.println(
                     "You knock on the door. It slowly opens and you see Dracula standing there. He offers to take you on a tour, and asks if you want to start upstairs or downstairs. What do you say? Enter \"upstairs\" or \"downstairs\".");
             userInput = scanner.nextLine();
-            a = userInput.equals("upstairs");
+            a = userInput.equals("upstairs"); // reassigning the variables, not creating new ones
             b = userInput.equals("downstairs");
             if (a == true) {
                 System.out.println(
@@ -21,9 +34,9 @@ public class ChooseYourPath {
                 userInput = scanner.nextLine();
                 a = userInput.equals("yes");
                 b = userInput.equals("no");
-                if (a == true) {
+                if (a == true) { // I have a ton of nested if statements
                     System.out.println("You unravel it. It gets really mad and puts you in a sarcophagus. The end.");
-                } else if (b == true) {
+                } else if (b == true) { // also else if statements
                     System.out.println(
                             "You're a kind person and don't unravel it. It gives you a suspicious looking biscuit as a reward. Do you eat it? Type yes or no.");
                     userInput = scanner.nextLine();
@@ -40,7 +53,7 @@ public class ChooseYourPath {
                 } else {
                     System.out.println(c);
                 }
-            } else if (b == true) {
+            } else if (b == true) { // lots of choices and branches off into the story
                 System.out.println(
                         "You go downstairs, and at the bottom of the staircase you see Bigfoot. He looks a lot like Chewbacca. Do you ask if they're related? Type yes or no.");
                 userInput = scanner.nextLine();
